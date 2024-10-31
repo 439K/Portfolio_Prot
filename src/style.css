@@ -271,7 +271,7 @@ button {
         display: flex;
         flex-direction: column; /* 子要素を縦に並べる */
         align-items: center; /* 子要素を中央に揃える */
-        background-color: #f4fabc; /* 背景色を元の色に */
+        background-color: #acf8fe; /* 背景色を元の色に */
     }
 
     .top img {
