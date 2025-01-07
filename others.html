@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAISON DÊTREとは?</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+
+    <div class="header">
+        <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+        <h1>RAISON DÊTREとは?</h1>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <ul class="nav-links">
+            <li><a href="index.html" onclick="toggleSidebar()">トップページ</a></li>
+            <li><a href="content.html" onclick="toggleSidebar()">楽曲紹介</a></li>
+            <li><a href="profile.html" onclick="toggleSidebar()">プロフィール</a></li>
+            <li><a href="others.html" onclick="toggleSidebar()">RAISON DÊTREとは?</a></li>
+        </ul>
+    </div>
+
+    <div class="profile-list">
+        <div class="profile-item">
+            <div class="profile">
+                <img src="src/images/Raison_icon.png" alt="Composer Profile Image">
+                <div class="profile-details">
+                    <h1>RAISON DÊTRE とは?</h1>
+                    <p></p>
+                    <p>読み方は「レゾンデートル」 INIAD公認DTMサークル</p>
+                    <p>主に個人あるいは複数人でPCを用いた作曲などを行っています。</p>
+                    <p>24年度赤羽台祭での楽曲出展の様子は<a href="https://439k.github.io/rd_fes24/" target="_new" rel="noopener noreferrer">こちら</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="questionnaire">
+        <p><a href="index.html">トップページに戻る</a></p>
+    </div>
+
+    <script src="src/script.js"></script>
+</body>
+</html>

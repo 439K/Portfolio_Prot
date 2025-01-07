@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プロフィール</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+
+    <div class="header">
+        <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+        <h1>プロフィール</h1>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <ul class="nav-links">
+            <li><a href="index.html" onclick="toggleSidebar()">トップページ</a></li>
+            <li><a href="content.html" onclick="toggleSidebar()">楽曲紹介</a></li>
+            <li><a href="profile.html" onclick="toggleSidebar()">プロフィール</a></li>
+            <li><a href="others.html" onclick="toggleSidebar()">RAISON DÊTREとは?</a></li>
+        </ul>
+    </div>
+
+    <div class="profile-list">
+        <div class="profile-item">
+            <div class="profile">
+                <div class="profile-details">
+                    <h1>Chikazu Kurosawa</h1>
+                    <p></p>
+                    <p>東洋大学 情報連携学部(INIAD) 2年生</p>
+                    <p>24年度 <a href="others.html">RAISON DÊTRE</a>代表</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-item">
+            <div class="profile">
+                <div class="profile-details">
+                    <h1>公開している楽曲はこちらから</h1>
+                    <p></p>
+                    <p>YouTubeには製作した一部の楽曲が</p>
+                    <p>SoundCloudには製作したすべての楽曲が掲載されています。</p>
+                    <p>こちらもぜひチェックしてください！</p>
+                </div>
+            </div>
+    
+            <div class="sns">
+                <a href="https://www.youtube.com/@439_K" target="_new" rel="noopener noreferrer"><img src="src/logo/youtube.png" alt="" width="90"></a>
+                <a href="https://soundcloud.com/439k" target="_new" rel="noopener noreferrer"><img src="src/logo/soundcloud.png" alt="" width="85"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="questionnaire">
+        <p><a href="index.html">トップページに戻る</a></p>
+    </div>
+    
+    <script src="src/script.js"></script>
+</body>
+</html>

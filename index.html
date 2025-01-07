@@ -6,111 +6,50 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio (P)</title>
+    <title>トップページ</title>
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-    <div class="top">
-        <h1>My Music Portfolio (Prot.)</h1>
+
+    <div class="header">
+        <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+        <h1>トップページ</h1>
     </div>
 
-    <div class="profile-list">
-        <div class="profile-item">
-            <div class="profile">
-                <img src="src/images/439K.jpg" alt="Composer Profile Image">
-                <div class="profile-details">
-                    <h1>Chikazu Kurosawa</h1>
-                    <p></p>
-                    <p>東洋大学 情報連携学部(INIAD) 2年生</p>
-                    <p>24年度 RAISON DÊTRE代表</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="profile-item">
-            <div class="profile">
-                <img src="src/images/Raison_icon.png" alt="Composer Profile Image">
-                <div class="profile-details">
-                    <h1>RAISON DÊTRE とは?</h1>
-                    <p></p>
-                    <p>読み方は「レゾンデートル」 INIAD公認DTMサークル</p>
-                    <p>主に個人あるいは複数人でPCを用いた作曲などを行っています。</p>
-                    <p>24年度赤羽台祭での楽曲出展の様子は<a href="https://439k.github.io/rd_fes24/" target="_new" rel="noopener noreferrer">こちら</a></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="profile-item">
-            <div class="profile">
-                <div class="profile-details">
-                    <h1>製作楽曲紹介</h1>
-                    <p></p>
-                    <p>自分がこれまでに製作した楽曲の中から抜粋してご紹介します。</p>
-                    <p>楽曲はイヤホンやヘッドホンでの試聴をおすすめします！</p>
-                    <p>PCの場合は楽曲選択後、<br>Spaceキーで楽曲の一時停止/再生<br>Rキーで楽曲のリピート再生ができます</p>
-                </div>
-            </div>
-
-            <div class="music-list">
-                <div class="music-item">
-                    <p class="song-title">OrKstra No.1</p>
-                    <button class="music-button">再生</button>
-                    <audio controls hidden="true">
-                        <source src="src/audio/OrKstra No.1 - 439K.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>                
-
-                <p class="artist_title">Chikazu Kurosawa</p>
-            
-                <div class="music-item">
-                    <p class="song-title">OrKstra No.2</p>
-                    <button class="music-button">再生</button>
-                    <audio controls hidden="true" data-volume="0.7">
-                        <source src="src/audio/OrKstra No.2 - 439K.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-            </div>
+    <div class="sidebar" id="sidebar">
+        <ul class="nav-links">
+            <li><a href="index.html" onclick="toggleSidebar()">トップページ</a></li>
+            <li><a href="content.html" onclick="toggleSidebar()">楽曲紹介</a></li>
+            <li><a href="profile.html" onclick="toggleSidebar()">プロフィール</a></li>
+            <li><a href="others.html" onclick="toggleSidebar()">RAISON DÊTREとは?</a></li>
+        </ul>
+    </div>
+ 
+    <div class="profilei">
+        <div class="profile-details">
+            <h1>Chikazu Kurosawaのポートフォリオサイトにようこそ！</h1>
             <p></p>
-        </div>
+            <p><a href="content.html">こちら</a>から、自分が作った楽曲を鑑賞することができます！</p>
+            <script src="https://unpkg.com/wavesurfer.js"></script>
+            <!-- 波形を表示するセクション -->
+            <div id="wave" style="width: 100%; height: 120px;"></div>
+            <!-- 波形描画スクリプト -->
+            <script>
+                const wavesurfer = WaveSurfer.create({
+                    container: '#wave',       // 波形を描画する要素のID
+                    waveColor: '#4CAF50',    // 波形の色
+                    responsive: true,        // レスポンシブ対応
+                    height: 120,             // 波形の高さ
+                    interact: false,         // ユーザー操作を無効化
+                    normalize: true          // 波形の正規化
+                });
 
-        <div class="profile-item">
-            <div class="profile">
-                <div class="profile-details">
-                    <h1>そのほかの楽曲はこちら</h1>
-                    <p></p>
-                    <p>YouTubeには製作した一部の楽曲が</p>
-                    <p>SoundCloudには製作したすべての楽曲が掲載されています。</p>
-                    <p>こちらもぜひチェックしてください！</p>
-                </div>
-            </div>
-
-            <div class="sns">
-                <a href="https://www.youtube.com/@439_K" target="_new" rel="noopener noreferrer"><img src="src/logo/youtube.png" alt="" width="90"></a>
-                <a href="https://soundcloud.com/439k" target="_new" rel="noopener noreferrer"><img src="src/logo/soundcloud.png" alt="" width="85"></a>
-            </div>
-        </div>
-    </div>
-
-    <div class="questionnaire">
-        <p>Made by Chikazu Kurosawa</p>
-    </div>
-
-    <div class="player-footer">
-        <div class="player-info">
-            <span class="footer-song-title">再生中の曲のタイトル</span> - 
-            <span class="song-artist">作曲者の名前</span>
-        </div>
-        <div class="player-controls">
-            <button id="play-button"><img src="src/bar/play.png" alt="Play/Pause"></button>
-            <button id="repeat-button"><img src="src/bar/1repeat.png" alt="Repeat"></button>
-            <input type="range" id="seek-bar" value="0" max="100">
-            <span class="current-time">0:00</span> / 
-            <span class="total-time">0:00</span>
+                // 音声ファイルをロードして波形を描画
+                wavesurfer.load('src/audio/OrKstra No.1 - 439K.mp3');
+            </script>
         </div>
     </div>
-    
+
     <script src="src/script.js"></script>
 </body>
 </html>

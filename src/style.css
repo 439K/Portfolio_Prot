@@ -26,6 +26,7 @@ body {
     grid-template-columns: 1fr; /* デフォルトで1列 */
     grid-gap: 30px;
     margin: 30px;
+    padding-top: 70px;
 }
 
 .profile-item {
@@ -39,6 +40,15 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.profilei {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 縦方向の中央揃え */
+    justify-content: center; /* 横方向の中央揃え */
+    margin-top: 200px;
+    padding: 50px 20px;
+    border-radius: 10px;
+}
 
 /* プロフィール部分のレイアウト */
 .profile {
@@ -155,6 +165,7 @@ audio {
 
 .player-footer {
     position: fixed;
+    z-index: 1100; /* ヘッダーとサイドバーより優先度を高くする */
     bottom: 0;
     left: 0;
     right: 0;
@@ -259,12 +270,6 @@ button {
     background-color: #ffcc00; /* 再生中でもホバーした時に少し濃くする */
 }
 
-/* レスポンシブ対応 */
-@media (min-width: 900px) {
-    .profile-list {
-        grid-template-columns: 1fr 1fr; /* 幅900px以上で2列表示 */
-    }
-}
 
 @media (max-width: 500px) {
     .top {
@@ -312,4 +317,87 @@ button {
 
 .artist_title {
     color: white;
+}
+
+/* ハンバーガーメニューのボタン */
+.header {
+    position: fixed; /* 固定表示 */
+    top: 0;
+    left: 0;
+    width: 100%; /* 画面幅全体に広げる */
+    z-index: 1000; /* サイドバーより優先度を高くする */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: white;
+}
+
+.header h1 {
+    margin: 0;
+    padding-right: 40px;
+    font-size: 24px;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* サイドバー */
+.sidebar {
+    position: fixed;
+    top: 58px;
+    left: -300px; /* 初期状態では画面外に隠す */
+    width: 250px;
+    height: 100vh;
+    background-color: #00796b;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0; /* 表示時は画面内に表示 */
+}
+
+.sidebar .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar .nav-links li {
+    margin: 20px 0;
+}
+
+.sidebar .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.sidebar .nav-links li a:hover {
+    color: #e0f7fa;
+}
+
+/* メインコンテンツ */
+.main-content {
+    margin: 0;
+    padding: 20px;
+    background-color: #e0f7fa;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 20px;
+    }
 }
